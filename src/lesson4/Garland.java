@@ -38,6 +38,5 @@ public class Garland {
         gar.blinkGarland(garland, 3);
         System.out.println("Режим бегущей строки:");
         gar.shiftString(garland);
-
     }
 }
