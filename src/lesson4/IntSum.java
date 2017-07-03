@@ -3,22 +3,22 @@ package lesson4;
 import java.util.Scanner;
 
 public class IntSum {
-    public void sum() {
+    public int checkNumber(String question, String ifWrong) {
         Scanner sc = new Scanner(System.in);
+        int number = 0;
+        System.out.println(question);
+        if (sc.hasNextInt()) {
+            number = sc.nextInt();
+        } else {
+            System.out.println(ifWrong);
+        }
+        return number;
+    }
+
+    public void sum() {
         int first = 0, second = 0, sum = 0;
-        System.out.println("Введите первое число: ");
-        if (sc.hasNextInt()) {
-            first = sc.nextInt();
-        } else {
-            System.out.println("Введенное число не целое!!!");
-        }
-        sc.nextLine();
-        System.out.println("Введите второе число: ");
-        if (sc.hasNextInt()) {
-            second = sc.nextInt();
-        } else {
-            System.out.println("Введенное число не целое!!!");
-        }
+        first = checkNumber("Введите первое число: ", "Введенное число не целое!!!");
+        second = checkNumber("Введите второе число: ", "Введенное число не целое!!!");
         sum = first + second;
         System.out.println("Сумма чисел = " + sum);
     }
