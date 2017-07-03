@@ -1,4 +1,4 @@
-package lesson3;
+package MyPackage;
 
 public class ComparableTypes {
     byte b = -126;
@@ -76,5 +76,11 @@ public class ComparableTypes {
     public static void main(String[] args) {
         ComparableTypes types = new ComparableTypes();
         types.toByte();
+        types.toShort();;
+        types.toInt();
+        types.toLong();
+        types.toFloat();
+        types.toDouble();;
+        types.toChar();;
     }
 }
