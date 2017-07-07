@@ -1,6 +1,6 @@
 package lesson5;
 
-public class days {
+public class Days {
     public static void main(String[] args) {
         int number = Integer.parseInt(args[0]);
         if (number == 1) {

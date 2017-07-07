@@ -27,8 +27,8 @@ public class AbsoluteValue {
         b = checkNumber("Enter the second number: ", "Not appropriate number");
         c = checkNumber("Enter the third number: ", "Not appropriate number");
         a = (a < 0) ? -a : a;
-        b = b < 0 ? -b : b;
-        c = c < 0 ? -c : c;
+        b = (b < 0) ? -b : b;
+        c = (c < 0) ? -c : c;
         min = a;
         min = (min < b) ? min : b;
         min = (min < c) ? min : c;
