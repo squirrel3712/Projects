@@ -9,9 +9,7 @@ public class Factorial {
         double fact = 1;
         if (number < 0) {
             System.out.println("Отрицательный факториал");
-        } else if (number == 0 || number == 1) {
-            fact = 1;
-        } else {
+        } else{
             for (int i = 1; i <= number; i++) {
                 fact *= i;
             }

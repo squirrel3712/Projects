@@ -1,4 +1,4 @@
-package lesson4;
+package lesson5;
 
 public class Garland {
     public void blinkGarland(int garland, int count) {
