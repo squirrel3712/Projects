@@ -1,5 +1,7 @@
 package lesson5;
 
+import java.util.Scanner;
+
 public class Garland {
     public void blinkGarland(int garland, int count) {
         for (int i = 0; i < count; i++) {
@@ -32,8 +34,9 @@ public class Garland {
     public static void main(String[] args) {
         int garland = 20, number = 0;
         Garland gar = new Garland();
-        IntSum value = new IntSum();
-        number = value.checkNumber("Введите число от 1 до 4", "Ошибка ввода!!!");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите число от 1 до 4 ");
+        number = sc.nextInt();
         switch (number) {
             case 1:
                 gar.printState(garland);
