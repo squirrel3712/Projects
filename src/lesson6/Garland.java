@@ -32,9 +32,12 @@ public class Garland {
     }
 
     public void shiftString(int[] garland) {
-        for (int i = 0; i < garland.length; i++) {
-            garland[i] <<= 1;
-            System.out.print(Integer.toBinaryString(garland[i]) + " ");
+        int count = garland.length - 1;
+        for (int i = 1; i < garland.length; i++) {
+            System.arraycopy(garland, 0, garland, i, count);
+            count--;
+            printState(garland);
+            System.out.println();
         }
     }
 
