@@ -32,10 +32,8 @@ public class Garland {
     }
 
     public void shiftString(int[] garland) {
-        int count = garland.length - 1;
-        for (int i = 1; i < garland.length; i++) {
-            System.arraycopy(garland, 0, garland, i, count);
-            count--;
+        for (int i = 0; i < garland.length; i++) {
+            System.arraycopy(garland, 0, garland, 1, garland.length-1);
             printState(garland);
             System.out.println();
         }
