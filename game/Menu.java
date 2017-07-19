@@ -54,12 +54,17 @@ public class Menu {
         System.out.println("( 2 ) Hard");
         System.out.println("( 3 ) Harder");
         System.out.println();
-        System.out.println("Selection : ");
         input = checkInput();
         switch (input) {
             case 1:
+                System.out.println("( 1 ) Normal");
+                break;
             case 2:
+                System.out.println("( 2 ) Hard");
+                break;
             case 3:
+                System.out.println("( 3 ) Harder");
+                break;
             default:
                 System.out.println("Incorrect symbol!!!" + '\n' + "Try again!!!");
                 System.out.println();
