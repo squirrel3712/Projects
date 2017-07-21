@@ -22,7 +22,8 @@ public class Driver extends Person {
         this.drivingExperience = drivingExperience;
     }
 
-    public String toString(){
-        return " Driver : full name - " + fullName + " exprience - " + drivingExperience + super.toString();
+    public String toString() {
+        return '\n' + " Driver : full name - " + fullName + ", exprience - " + drivingExperience +
+                super.toString();
     }
 }

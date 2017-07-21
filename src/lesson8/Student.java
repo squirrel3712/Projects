@@ -3,7 +3,7 @@ package lesson8;
 public class Student {
     private String firstName, lastName;
 
-    public Student(String firstName, String lastName){
+    public Student(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

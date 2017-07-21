@@ -11,7 +11,7 @@ public class SportCar extends Car {
         this.speed = speed;
     }
 
-    public String toString(){
-        return super.toString() + " speed - " + speed;
+    public String toString() {
+        return super.toString() + ", speed - " + speed;
     }
 }

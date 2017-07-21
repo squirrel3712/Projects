@@ -50,25 +50,25 @@ public class Car {
         this.engine = engine;
     }
 
-    public void start(){
+    public void start() {
         System.out.println("Go");
     }
 
-    public void stop(){
+    public void stop() {
         System.out.println("Stop");
     }
 
-    public void turnLeft(){
+    public void turnLeft() {
         System.out.println("Turn to left");
     }
 
-    public void turnRight(){
+    public void turnRight() {
         System.out.println("Turn to right");
     }
 
-    public String toString(){
+    public String toString() {
 
-        return " Car : mark -  " + mark + " class of Car - " + classOfCar +
-                " weight" + weight + driver.toString() + engine.toString();
+        return " Car : mark -  " + mark + ", class of Car - " + classOfCar +
+                ", weight " + weight + driver.toString() + engine.toString();
     }
 }

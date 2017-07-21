@@ -11,7 +11,7 @@ public class Lorry extends Car {
         this.carrying = carrying;
     }
 
-    public String toString(){
-        return super.toString() + " carying - " + carrying;
+    public String toString() {
+        return super.toString() + ", carying - " + carrying;
     }
 }

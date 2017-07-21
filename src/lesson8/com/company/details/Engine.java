@@ -20,7 +20,7 @@ public class Engine {
         this.company = company;
     }
 
-    public String toString(){
-        return " Engine :  pover - " + power + "company - " + company;
+    public String toString() {
+        return '\n' + " Engine :  pover - " + power + ", company - " + company;
     }
 }
