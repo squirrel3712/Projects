@@ -4,6 +4,14 @@ public class Engine {
     private int power;
     private String company;
 
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     public int getPower() {
         return power;
     }

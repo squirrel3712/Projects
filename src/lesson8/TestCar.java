@@ -20,6 +20,6 @@ public class TestCar {
         lorry.setMark("AB1000");
         lorry.setWeight(10000);
         lorry.setCarrying(4);
-        System.out.println(lorry.toString());
+        System.out.println(lorry);
     }
 }

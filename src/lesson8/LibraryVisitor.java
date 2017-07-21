@@ -15,6 +15,46 @@ public class LibraryVisitor {
         this.number = number;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public int getIdTicket() {
+        return idTicket;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setIdTicket(int idTicket) {
+        this.idTicket = idTicket;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
     public void takeBook(int count) {
         System.out.println(fullName + " takes " + count + " books");
     }
