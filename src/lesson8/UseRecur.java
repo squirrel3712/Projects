@@ -1,7 +1,20 @@
 package lesson8;
 
 public class UseRecur {
-    public void recur(int a, int b){
+    public static void recur(int from, int to) {
+        System.out.print(from + " ");
+        if (from == to) {
+            return;
+        }
+        if (from > to) {
+            from--;
+        } else {
+            from++;
+        }
+        recur(from, to);
+    }
 
+    public static void main(String[] args) {
+        recur(4, 10);
     }
 }

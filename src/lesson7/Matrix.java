@@ -16,18 +16,16 @@ public class Matrix {
         return m.row == row && m.column == column;
     }
 
-    public double[][] sumOfMatrix(Matrix m) {
-        double array1[][] = new double[row][column];
+    public void sumOfMatrix(Matrix m) {
         if (this.equals(m)) {
             for (int i = 0; i < row; i++) {
                 for (int j = 0; j < column; j++) {
-                    array1[i][j] = this.array[i][j] + m.array[i][j];
+                    this.array[i][j] = this.array[i][j] + m.array[i][j];
                 }
             }
         } else {
             System.out.println("There is problem with size of matrix!");
         }
-        return array1;
     }
 
     public void initialize(int buttomBound, int upperBound) {
@@ -39,20 +37,18 @@ public class Matrix {
         }
     }
 
-    public double[][] multiplicationOfNumber(int number) {
-        double array1[][] = new double[row][column];
+    public void multiplicationOfNumber(int number) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                array1[i][j] = this.array[i][j] * number;
+                this.array[i][j] = this.array[i][j] * number;
             }
         }
-        return array1;
     }
 
-    public static void printMatrix(double[][] array1) {
-        for (int i = 0; i < array1.length; i++) {
-            for (int j = 0; j < array1[0].length; j++) {
-                System.out.print(array1[i][j] + " ");
+    public void printMatrix() {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
@@ -64,14 +60,17 @@ public class Matrix {
         m1.initialize(-10, 10);
         m2.initialize(0, 15);
         System.out.println("The first matrix:");
-        printMatrix(m1.array);
+        m1.printMatrix();
         System.out.println("The second matrix: ");
-        printMatrix(m2.array);
+        m2.printMatrix();
         System.out.println("Sum of matrix: ");
-        printMatrix(m1.sumOfMatrix(m2));
+        m1.sumOfMatrix(m2);
+        m1.printMatrix();
         System.out.println("Multiplication:");
-        printMatrix(m1.multiplicationOfNumber(-2));
+        m1.multiplicationOfNumber(-2);
+        m1.printMatrix();
         System.out.println("Multiplication:");
-        printMatrix(m2.multiplicationOfNumber(2));
+        m2.multiplicationOfNumber(2);
+        m2.printMatrix();
     }
 }

@@ -4,20 +4,23 @@ public class Phone {
     private String number;
     private String model;
     private double weight;
+    private static int count;
 
-    Phone() {
+    public Phone() {
         System.out.println("Конструктор без параметров");
         number = null;
         model = null;
         weight = -1;
+        count++;
     }
 
-    Phone(String number, String model, double weight) {
+    public Phone(String number, String model, double weight) {
         this();
         System.out.println("Конструктор с параметрами");
         this.number = number;
         this.model = model;
         this.weight = weight;
+        count++;
     }
 
     public void setNumber(String number) {
@@ -52,10 +55,24 @@ public class Phone {
         System.out.println("Звонит " + name + " c данной модель телефона: " + number);
     }
 
+    public void sendMessage(String... number) {
+        for (String s : number) {
+            System.out.println("Сообщения будут отправлены на такой номера телефона :" + s);
+        }
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
     public static void main(String[] args) {
         Phone phone1 = new Phone();
+        phone1.setNumber("7");
+        phone1.setWeight(100);
+        phone1.setModel("IPhone");
         phone1.receiveCall("Ann");
         phone1.receiveCall("Ann", phone1.getNumber());
+        phone1.sendMessage("0990050625", "0504027251");
 
         Phone phone2 = new Phone("AN8", "Samsung", 200);
         phone2.receiveCall("Oleg");
@@ -64,5 +81,6 @@ public class Phone {
         Phone phone3 = new Phone("AK12", "Nokia", 300);
         phone3.receiveCall("Ilia");
         phone3.receiveCall("Ilia", phone3.getNumber());
+        System.out.println("Количество static count :" + getCount());
     }
 }

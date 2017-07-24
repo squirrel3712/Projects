@@ -1,4 +1,4 @@
-package lesson7;
+package lesson8;
 
 public class Phone {
     private String number;
@@ -6,7 +6,7 @@ public class Phone {
     private double weight;
     private static int count;
 
-    Phone() {
+    public Phone() {
         System.out.println("Конструктор без параметров");
         number = null;
         model = null;
@@ -14,7 +14,7 @@ public class Phone {
         count++;
     }
 
-    Phone(String number, String model, double weight) {
+    public Phone(String number, String model, double weight) {
         this();
         System.out.println("Конструктор с параметрами");
         this.number = number;
@@ -55,13 +55,13 @@ public class Phone {
         System.out.println("Звонит " + name + " c данной модель телефона: " + number);
     }
 
-    public void sendMessage(String ...number){
-        for(String s : number){
+    public void sendMessage(String... number) {
+        for (String s : number) {
             System.out.println("Сообщения будут отправлены на такой номера телефона :" + s);
         }
     }
 
-    public static int getCount(){
+    public static int getCount() {
         return count;
     }
 

@@ -10,20 +10,20 @@ public class Circle {
         diametr = 2 * this.radius;
     }
 
-    public double scircle() {
+    public double getLengthViaRadius() {
         return PI * (radius * radius);
     }
 
-    public double lcircle() {
+    public double getLengthViaDiametr() {
         return PI * diametr;
     }
 
     public static void main(String[] args) {
         Circle c1 = new Circle(10);
         Circle c2 = new Circle(5);
-        System.out.println("Площадь для круга с1 :" + c1.scircle());
-        System.out.println("Площадь для круга с2 :" + c2.scircle());
-        System.out.println("Длина окружности для с1 :" + c1.lcircle());
-        System.out.println("Длина окружности для с2 :" + c2.lcircle());
+        System.out.println("Площадь для круга с1 :" + c1.getLengthViaRadius());
+        System.out.println("Площадь для круга с2 :" + c2.getLengthViaRadius());
+        System.out.println("Длина окружности для с1 :" + c1.getLengthViaDiametr());
+        System.out.println("Длина окружности для с2 :" + c2.getLengthViaDiametr());
     }
 }
