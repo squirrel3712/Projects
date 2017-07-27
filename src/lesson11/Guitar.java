@@ -3,6 +3,10 @@ package lesson11;
 public class Guitar implements Tool {
     private int countOfStrings;
 
+    public Guitar(int countOfStrings){
+        this.countOfStrings = countOfStrings;
+    }
+
     public int getCountOfStrings() {
         return countOfStrings;
     }
@@ -13,7 +17,7 @@ public class Guitar implements Tool {
 
     @Override
     public void play() {
-        System.out.println("Guitar is playing");
+        System.out.println("Guitar is playing with count of string = " + getCountOfStrings());
     }
 
     @Override

@@ -1,13 +1,14 @@
-package lesson9_10;
+package lesson9_10.task3;
 
 abstract class Flower {
     private String name;
     private int date;
     public static int count;
 
-    Flower(String name, int date) {
+    public Flower(String name, int date) {
         this.name = name;
         this.date = date;
+        count++;
     }
 
     public String getName() {
@@ -26,7 +27,20 @@ abstract class Flower {
         this.date = date;
     }
 
-    abstract int price();
+    abstract public int price();
+
+    public static int costOfBouquet(Flower[] flowers){
+        int sum = 0;
+       for(Flower f : flowers){
+           if(f instanceof Tulip){
+               sum += ((Tulip) f).costBouquetOfTulip();
+           }
+           if(f instanceof Rose){
+               sum += ((Rose) f).costBouquetOfRose();
+           }
+       }
+       return sum;
+    }
 
     public void printState() {
         System.out.println(name + " costs " + price());

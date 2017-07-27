@@ -1,9 +1,9 @@
-package lesson9_10;
+package lesson9_10.task4;
 
 public class Dog extends Animal {
     private int age;
 
-    Dog(String food, String location, int age) {
+    public Dog(String food, String location, int age) {
         super(food, location);
         this.age = age;
     }
@@ -17,12 +17,12 @@ public class Dog extends Animal {
     }
 
     @Override
-    void makeNoise() {
+    public void makeNoise() {
         System.out.println("Gav-Gav");
     }
 
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("I like eating " + getFood());
     }
 

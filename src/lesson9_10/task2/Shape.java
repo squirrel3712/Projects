@@ -1,4 +1,4 @@
-package lesson9_10;
+package lesson9_10.task2;
 
 abstract public class Shape {
     private String color;
@@ -21,5 +21,17 @@ abstract public class Shape {
         Shape shape = (Shape) o;
 
         return color.equals(shape.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return color != null ? color.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "color='" + color + '\'' +
+                '}';
     }
 }

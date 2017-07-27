@@ -1,4 +1,4 @@
-package lesson9_10;
+package lesson9_10.task2;
 
 public class TestAbstract {
     public static void main(String[] args) {
@@ -9,5 +9,6 @@ public class TestAbstract {
         for (Shape s : shape) {
             s.draw();
         }
+        System.out.println(shape[0]);
     }
 }

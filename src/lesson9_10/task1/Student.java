@@ -1,4 +1,4 @@
-package lesson9_10;
+package lesson9_10.task1;
 
 public class Student {
     private String firstName, lastName;

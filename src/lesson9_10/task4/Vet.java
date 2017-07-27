@@ -1,4 +1,4 @@
-package lesson9_10;
+package lesson9_10.task4;
 
 public class Vet {
     public static void treatAnimal(Animal animal) {

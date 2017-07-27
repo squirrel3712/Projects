@@ -3,6 +3,10 @@ package lesson11;
 public class Drum implements Tool {
     private int size;
 
+    public Drum(int size){
+        this.size = size;
+    }
+
     public int getSize() {
         return size;
     }
@@ -35,6 +39,6 @@ public class Drum implements Tool {
 
     @Override
     public void play() {
-        System.out.println("Dram is playing");
+        System.out.println("Dram is playing with size = " + getSize());
     }
 }

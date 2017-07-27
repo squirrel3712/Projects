@@ -1,21 +1,10 @@
-package lesson9_10;
+package lesson9_10.task2;
 
 public class Rectangle extends Shape {
     private int x1, y1, x2, y2;
-    private String color;
 
-    Rectangle(String color) {
-        this.color = color;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public void setColor(String color) {
-        this.color = color;
+    public Rectangle(String color) {
+        setColor(color);
     }
 
     public int getX1() {
@@ -52,8 +41,8 @@ public class Rectangle extends Shape {
 
     @Override
     public String draw() {
-        System.out.println("Rectangle has color - " + color);
-        return color;
+        System.out.println("Rectangle has color - " + getColor());
+        return getColor();
     }
 
     @Override
@@ -67,7 +56,26 @@ public class Rectangle extends Shape {
         if (x1 != rectangle.x1) return false;
         if (y1 != rectangle.y1) return false;
         if (x2 != rectangle.x2) return false;
-        if (y2 != rectangle.y2) return false;
-        return color != null ? color.equals(rectangle.color) : rectangle.color == null;
+        return y2 == rectangle.y2;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + x1;
+        result = 31 * result + y1;
+        result = 31 * result + x2;
+        result = 31 * result + y2;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "x1=" + x1 +
+                ", y1=" + y1 +
+                ", x2=" + x2 +
+                ", y2=" + y2 +
+                '}';
     }
 }

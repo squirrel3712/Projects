@@ -1,9 +1,9 @@
-package lesson9_10;
+package lesson9_10.task4;
 
 public class Horse extends Animal {
     private String colorOfMane;
 
-    Horse(String food, String location, String colorOfMane) {
+    public Horse(String food, String location, String colorOfMane) {
         super(food, location);
         this.colorOfMane = colorOfMane;
     }
@@ -17,12 +17,12 @@ public class Horse extends Animal {
     }
 
     @Override
-    void makeNoise() {
+    public void makeNoise() {
         System.out.println("Фррр");
     }
 
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("i like eating " + getFood());
     }
 

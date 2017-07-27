@@ -1,4 +1,4 @@
-package lesson9_10;
+package lesson9_10.task4;
 
 public class Cat extends Animal {
     private String color;
@@ -11,18 +11,18 @@ public class Cat extends Animal {
         this.color = color;
     }
 
-    Cat(String food, String location, String color) {
+    public Cat(String food, String location, String color) {
         super(food, location);
         this.color = color;
     }
 
     @Override
-    void makeNoise() {
+    public void makeNoise() {
         System.out.println("Мяуу");
     }
 
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("I like eating " + getFood());
     }
 

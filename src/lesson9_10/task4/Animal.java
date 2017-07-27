@@ -1,10 +1,10 @@
-package lesson9_10;
+package lesson9_10.task4;
 
 public abstract class Animal {
     private String food;
     private String location;
 
-    Animal(String food, String location) {
+    public Animal(String food, String location) {
         this.food = food;
         this.location = location;
     }
@@ -25,9 +25,9 @@ public abstract class Animal {
         this.location = location;
     }
 
-    abstract void makeNoise();
+    public abstract void makeNoise();
 
-    abstract void eat();
+    public abstract void eat();
 
     public void sleep() {
         System.out.println("I can sleep");

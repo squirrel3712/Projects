@@ -1,21 +1,10 @@
-package lesson9_10;
+package lesson9_10.task2;
 
 public class Circles extends Shape {
     private int x, y, radius;
-    private String color;
 
-    public Circles(String color) {
-        this.color = color;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public void setColor(String color) {
-        this.color = color;
+    public Circles(String color){
+        setColor(color);
     }
 
     public int getX() {
@@ -44,8 +33,8 @@ public class Circles extends Shape {
 
     @Override
     public String draw() {
-        System.out.println("Circle has color - " + color);
-        return color;
+        System.out.println("Circle has color - " + getColor());
+        return getColor();
     }
 
     @Override
@@ -58,7 +47,24 @@ public class Circles extends Shape {
 
         if (x != circles.x) return false;
         if (y != circles.y) return false;
-        if (radius != circles.radius) return false;
-        return color.equals(circles.color);
+        return radius == circles.radius;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + x;
+        result = 31 * result + y;
+        result = 31 * result + radius;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Circles{" +
+                "x=" + x +
+                ", y=" + y +
+                ", radius=" + radius +
+                '}';
     }
 }

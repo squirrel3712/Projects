@@ -3,6 +3,10 @@ package lesson11;
 public class Trumpet implements Tool {
     private int diametr;
 
+    public Trumpet(int diametr){
+        this.diametr = diametr;
+    }
+
     public int getDiametr() {
         return diametr;
     }
@@ -35,6 +39,6 @@ public class Trumpet implements Tool {
 
     @Override
     public void play() {
-        System.out.println("Trumpet is playing");
+        System.out.println("Trumpet is playing with diametr = " + getDiametr());
     }
 }
