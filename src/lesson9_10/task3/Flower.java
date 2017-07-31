@@ -29,21 +29,12 @@ abstract class Flower {
 
     abstract public int price();
 
-    public static int costOfBouquet(Flower[] flowers){
+    public static int costOfBouquet(Flower... flowers) {
         int sum = 0;
-       for(Flower f : flowers){
-           if(f instanceof Tulip){
-               sum += ((Tulip) f).costBouquetOfTulip();
-           }
-           if(f instanceof Rose){
-               sum += ((Rose) f).costBouquetOfRose();
-           }
-       }
-       return sum;
-    }
-
-    public void printState() {
-        System.out.println(name + " costs " + price());
+        for (Flower f : flowers) {
+            sum += f.price();
+        }
+        return sum;
     }
 
     @Override

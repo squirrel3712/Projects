@@ -1,22 +1,15 @@
 package lesson9_10.task5;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 public class Pear extends Fruit {
+    public static final int PRICE_PER_KG = 15;
+
     public Pear(int weight) {
         super(weight);
     }
 
     public int getPrice() {
-        return 10;
-    }
-
-    public int costOfPear(Pear... pear) {
-        int sum = 0;
-        for (Pear p : pear) {
-            sum += getPrice() * p.getWeight();
-        }
-        return sum;
+        return PRICE_PER_KG * getWeight();
     }
 
     @Override

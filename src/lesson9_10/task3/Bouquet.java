@@ -2,36 +2,15 @@ package lesson9_10.task3;
 
 public class Bouquet {
     public static void main(String[] args) {
-        Flower[] flowers1 = new Flower[3];
-        flowers1[0] = new Rose("Rose red", 10);
-        flowers1[1] = new Tulip("Tilip pink", 5);
-        flowers1[2] = new Rose("Rose red", 10);
-        for (Flower f : flowers1) {
-            f.printState();
-        }
-        System.out.println("Cost of bouquet: " + Flower.costOfBouquet(flowers1));
-        System.out.println();
+        Rose r1 = new Rose("Red rose", 5);
+        Rose r2 = new Rose("Red rise", 5);
+        Rose r3 = new Rose("Red rise", 5);
+        Tulip t1 = new Tulip("Pink tulip", 7);
+        Tulip t2 = new Tulip("Pink tulip", 7);
 
-        Flower[] flowers2 = new Flower[3];
-        flowers2[0] = new Rose("Rose red", 10);
-        flowers2[1] = new Tulip("Rose red", 10);
-        flowers2[2] = new Rose("Rose red", 10);
-        for (Flower f : flowers2) {
-            f.printState();
-        }
-        System.out.println("Cost of bouquet: " + Flower.costOfBouquet(flowers2));
-        System.out.println();
-
-        Flower[] flowers3 = new Flower[5];
-        flowers3[0] = new Rose("Tulip pink", 5);
-        flowers3[1] = new Tulip("Tilip pink", 5);
-        flowers3[2] = new Rose("Tulip pink", 5);
-        flowers3[3] = new Tulip("Tilip pink", 5);
-        flowers3[4] = new Rose("Tulip pink", 5);
-        for (Flower f : flowers3) {
-            f.printState();
-        }
-        System.out.println("Cost of bouquet: " + Flower.costOfBouquet(flowers3));
+        System.out.println(" Average cost of rose: " + Flower.costOfBouquet(r1, r2, r3));
+        System.out.println(" Average cost of tulip: " + Flower.costOfBouquet(t1, t1));
+        System.out.println(" Average cost of flowers: " + Flower.costOfBouquet(r1, r2, r3, t1, t2));
         System.out.println("Count of sold flowers " + Flower.count);
     }
 }

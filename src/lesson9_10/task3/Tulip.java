@@ -1,20 +1,19 @@
 package lesson9_10.task3;
 
 public class Tulip extends Flower {
-    public  int countOfFlowers;
+    public static final int COST_OF__ROSE = 150;
+    public int countOfTulip;
+
     public Tulip(String name, int date) {
         super(name, date);
-        countOfFlowers++;
+        countOfTulip++;
     }
 
     @Override
     public int price() {
-        return 50;
+        return COST_OF__ROSE * countOfTulip;
     }
 
-    public int costBouquetOfTulip(){
-        return price() * countOfFlowers;
-    }
 
     @Override
     public boolean equals(Object o) {

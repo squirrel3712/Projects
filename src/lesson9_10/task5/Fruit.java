@@ -21,9 +21,12 @@ abstract public class Fruit {
         System.out.print("Made in Ukraine");
     }
 
-    public static int sumOfFruit(Apple apple, Apricot apricot, Pear pear)
-    {
-        return apple.costOfApple()+apricot.costOfApricot()+pear.costOfPear();
+    public static int costOfFruits(Fruit... fruits) {
+        int sum = 0;
+        for (Fruit a : fruits) {
+            sum += a.getPrice();
+        }
+        return sum;
     }
 
     @Override
