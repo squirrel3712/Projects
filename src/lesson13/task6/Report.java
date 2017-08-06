@@ -1,4 +1,4 @@
-package lesson13.task6;
+package task6;
 
 public class Report {
     public static void generateReport(Employee[] employee) {

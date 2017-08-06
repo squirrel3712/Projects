@@ -1,10 +1,12 @@
-package lesson13task6;
+package task6;
 
-import java.util.Random;
+import java.io.UnsupportedEncodingException;
+import java.util.Date;
 
 public class Employee {
     private String fullName;
     private int salary;
+    public static Date salaryDate;
 
     public Employee(String fullName, int salary) {
         this.fullName = fullName;
@@ -27,11 +29,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         Employee[] employee = new Employee[3];
         employee[0] = new Employee("Ann Chunosova", 10000);
         employee[1] = new Employee("Oleg Ostrov", 12000);
         employee[2] = new Employee("Iliy Petrov", 6000);
-        Report.generateReport(employee);
+        FullReport.generateFullReport(employee);
     }
 }
