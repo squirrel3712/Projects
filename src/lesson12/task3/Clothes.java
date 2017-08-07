@@ -27,4 +27,33 @@ public abstract class Clothes {
     public void setSize(int size) {
         this.size = size;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Clothes clothes = (Clothes) o;
+
+        if (price != clothes.price) return false;
+        if (size != clothes.size) return false;
+        return color != null ? color.equals(clothes.color) : clothes.color == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = color != null ? color.hashCode() : 0;
+        result = 31 * result + price;
+        result = 31 * result + size;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Clothes{" +
+                "color='" + color + '\'' +
+                ", price=" + price +
+                ", size=" + size +
+                '}';
+    }
 }

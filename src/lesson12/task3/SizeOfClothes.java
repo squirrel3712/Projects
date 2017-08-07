@@ -20,4 +20,13 @@ public enum SizeOfClothes {
     public String getDescription() {
         return "Adult size";
     }
+
+    @Override
+    public String toString() {
+        return "SizeOfClothes{" +
+                "eroSize=" + eroSize +
+                '}';
+    }
+
+
 }
