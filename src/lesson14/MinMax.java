@@ -1,6 +1,6 @@
 package lesson14;
 
-public class MinMax<T extends Number> {
+public class MinMax<T extends Comparable<T>> {
     private T[] array;
 
     public MinMax(T[] array) {
@@ -8,8 +8,8 @@ public class MinMax<T extends Number> {
     }
 
     public static void main(String[] args) {
-        Integer array1[] = new Integer[]{ 1, 2, 3, 4 , 5};
-        Double array2[] = new Double[]{ 1.765, 2.0, 3.9, 0.0, 5.9};
+        Integer array1[] = new Integer[]{1, 2, 3, 4, 5};
+        Double array2[] = new Double[]{1.765, 2.0, 3.9, 0.0, 5.9};
         MinMax<Integer> i = new MinMax<>(array1);
         MinMax<Double> d = new MinMax<>(array2);
         System.out.println("Max of Integer array = " + i.findMax());
@@ -27,20 +27,20 @@ public class MinMax<T extends Number> {
         this.array = array;
     }
 
-    public <T extends Comparable> T findMin() {
+    public T findMin() {
         T min = this.array[0];
-       for(int i = 1; i<array.length; i++){
-           if(min.compareTo(array[i])>0){
-               min = this.array[i];
-           }
-       }
-       return min;
+        for (int i = 1; i < array.length; i++) {
+            if (min.compareTo(array[i]) > 0) {
+                min = this.array[i];
+            }
+        }
+        return min;
     }
 
-    public <T extends Comparable>T findMax() {
+    public T findMax() {
         T max = this.array[0];
-        for(int i = 1; i<array.length; i++){
-            if(max.compareTo(array[i])<0){
+        for (int i = 1; i < array.length; i++) {
+            if (max.compareTo(array[i]) < 0) {
                 max = this.array[i];
             }
         }
