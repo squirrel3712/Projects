@@ -1,12 +1,10 @@
 package lesson7;
 
-import java.util.Random;
-
 public class Matrix<T extends Number> {
     T array[][];
     int row, column;
 
-    Matrix(T [][] array) {;
+    Matrix(T[][] array) {
         this.array = array;
         row = array.length;
         column = array[0].length;
@@ -16,63 +14,53 @@ public class Matrix<T extends Number> {
         return m.row == row && m.column == column;
     }
 
-    public <T extends Number> void sumOfMatrix(Matrix<T> m) {
+    public Matrix<Double> sumOfMatrix(Matrix<? extends Number> m) {
+        Double newArray[][] = new Double[row][column];
         if (this.equals(m)) {
             for (int i = 0; i < row; i++) {
                 for (int j = 0; j < column; j++) {
-                    //this.array[i][j] = this.array[i][j] + m.array[i][j];
+                    newArray[i][j] = this.array[i][j].doubleValue() + m.array[i][j].doubleValue();
                 }
             }
         } else {
             System.out.println("There is problem with size of matrix!");
         }
+        return new Matrix<>(newArray);
     }
 
-    public void initialize(int buttomBound, int upperBound) {
-        Random rand = new Random();
+    public Matrix<Double> multiplicationOfNumber(T number) {
+        Double newArray[][] = new Double[row][column];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                //array[i][j] = rand.nextInt(upperBound) + buttomBound;
+                newArray[i][j] = this.array[i][j].doubleValue() * number.doubleValue();
             }
         }
+        return new Matrix<>(newArray);
     }
 
-    public <T extends  Number>void multiplicationOfNumber(T number) {
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < column; j++) {
-                //this.array[i][j] = this.array[i][j] * number;
-            }
-        }
-    }
-
-    public void printMatrix() {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                System.out.print(array[i][j] + " ");
+    public static void printMatrix(Matrix<? extends Number> m) {
+        for (int i = 0; i < m.array.length; i++) {
+            for (int j = 0; j < m.array[0].length; j++) {
+                System.out.print(m.array[i][j] + " ");
             }
             System.out.println();
         }
     }
 
     public static void main(String[] args) {
-        Integer array1 [][] = new Integer[5][5];
-        Integer array2 [][] = new Integer[5][5];
+        Integer array1[][] = new Integer[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        Double array2[][] = new Double[][]{{9.9, 10.9, 11.0}, {0.0, 4.9, 36.9}, {6.0, 4.9, 1.0}};
         Matrix<Integer> m1 = new Matrix<>(array1);
-        Matrix<Integer> m2 = new Matrix<>(array2);
-        m1.initialize(-10, 10);
-        m2.initialize(0, 15);
+        Matrix<Double> m2 = new Matrix<>(array2);
         System.out.println("The first matrix:");
-        m1.printMatrix();
+        printMatrix(m1);
         System.out.println("The second matrix: ");
-        m2.printMatrix();
+        printMatrix(m2);
         System.out.println("Sum of matrix: ");
-        m1.sumOfMatrix(m2);
-        m1.printMatrix();
+        printMatrix(m1.sumOfMatrix(m2));
         System.out.println("Multiplication:");
-        m1.multiplicationOfNumber(-2);
-        m1.printMatrix();
+        printMatrix(m1.multiplicationOfNumber(2));
         System.out.println("Multiplication:");
-        m2.multiplicationOfNumber(2);
-        m2.printMatrix();
+        printMatrix(m2.multiplicationOfNumber(2.0));
     }
 }
