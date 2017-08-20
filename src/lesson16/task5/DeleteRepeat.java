@@ -6,14 +6,13 @@ import java.util.regex.Pattern;
 
 public class DeleteRepeat {
     public static String delRepeat(String str) {
-        String newStr = "";
         Pattern pattern = Pattern.compile("\\D+\\s*");
         String array[] = pattern.split(str);
         Set set = new TreeSet();
         for (String s : array) {
             set.add(s);
         }
-        return newStr += set.toString();
+        return set.toString();
     }
 
     public static void main(String[] args) {

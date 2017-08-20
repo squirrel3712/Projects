@@ -14,10 +14,8 @@ public class Polindrom {
         StringBuilder builder;
         for (String str : array) {
             builder = new StringBuilder(str);
-            if (str.equals(builder.reverse().toString())) {
-                if (!str.isEmpty()) {
-                    System.out.println(str);
-                }
+            if (!str.isEmpty() && str.equals(builder.reverse().toString())) {
+                System.out.println(str);
             }
         }
     }

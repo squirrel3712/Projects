@@ -1,4 +1,4 @@
-package lesson16.task1_2;
+package lesson17;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,38 @@ public class HeavyBox {
         this.height = height;
         this.depth = depth;
         this.weight = weight;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getDepth() {
+        return depth;
+    }
+
+    public void setDepth(int depth) {
+        this.depth = depth;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     @Override
@@ -60,8 +92,8 @@ public class HeavyBox {
         System.out.println(arrayList.contains(box1));
         System.out.println(arrayList.remove(0));
         System.out.println("Size of arrayList =  " + arrayList.size());
-        for (HeavyBox heavyBox : arrayList) {
-            System.out.println(heavyBox);
+        for (HeavyBox array : arrayList) {
+            System.out.println(array.toString());
         }
     }
 }
