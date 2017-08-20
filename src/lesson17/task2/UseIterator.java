@@ -1,4 +1,6 @@
-package lesson17;
+package lesson17.task2;
+
+import lesson17.task2.HeavyBox;
 
 import java.util.ArrayList;
 import java.util.Iterator;

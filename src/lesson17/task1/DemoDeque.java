@@ -1,4 +1,6 @@
-package lesson17;
+package lesson17.task1;
+
+import lesson17.task2.HeavyBox;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,4 +1,4 @@
-package lesson17;
+package lesson17.task3;
 public class Toy {
     private String name;
     private int сost;
