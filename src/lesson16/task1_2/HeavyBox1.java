@@ -54,8 +54,8 @@ public class HeavyBox1 implements Comparable<HeavyBox1> {
         SortedSet<HeavyBox1> set = new TreeSet<>();
         set.add(box1);
         set.add(box2);
-        for (HeavyBox1 array : set) {
-            System.out.println(array);
+        for (HeavyBox1 heavyBox : set) {
+            System.out.println(heavyBox);
         }
     }
 

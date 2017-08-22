@@ -50,23 +50,25 @@ public class Student {
         this.marks = marks;
     }
 
-    public static void averageMark(List<Student> students) {
-        int sum, averageSum = 0;
-        for (Student s : students) {
-            sum = 0;
-            Map<String, Integer> marks = s.getMarks();
-            Set<Map.Entry<String, Integer>> set = marks.entrySet();
-            for (Map.Entry<String, Integer> map : set) {
-                String key = map.getKey();
-                sum += marks.get(key);
-            }
-            averageSum = sum / marks.size();
-            if (averageSum >= 3) {
-                s.setCourse(s.getCourse() + 1);
+    public static void passOrNot(List<Student> students) {
+        for (Student student : students) {
+            if (averageMark(student) >= 3) {
+                student.setCourse(student.getCourse() + 1);
             } else {
-                students.remove(s);
+                students.remove(student);
             }
         }
+    }
+
+    public static int averageMark(Student student) {
+        int sum = 0;
+        Map<String, Integer> marks = student.getMarks();
+        Set<Map.Entry<String, Integer>> set = marks.entrySet();
+        for (Map.Entry<String, Integer> map : set) {
+            String key = map.getKey();
+            sum += marks.get(key);
+        }
+        return sum / marks.size();
     }
 
     public static void printStudent(List<Student> students, int cource) {

@@ -6,11 +6,11 @@ import java.util.TreeSet;
 
 public class Category {
     private String name;
-    private Set<Product> setProduct;
+    private Set<Product> products;
 
     public Category(String name, Set<Product> set) {
         this.name = name;
-        setProduct = set;
+        products = set;
     }
 
     public String getName() {
@@ -21,12 +21,12 @@ public class Category {
         this.name = name;
     }
 
-    public Set<Product> getSetProduct() {
-        return setProduct;
+    public Set<Product> getProducts() {
+        return products;
     }
 
-    public void setSetProduct(Set<Product> setProduct) {
-        this.setProduct = setProduct;
+    public void setProducts(Set<Product> setProduct) {
+        this.products = setProduct;
     }
 
     public static void printProduct(Set s) {
@@ -41,7 +41,7 @@ public class Category {
     public String toString() {
         return "Category{" +
                 "name='" + name + '\'' +
-                ", setProduct=" + setProduct +
+                ", setProduct=" + products +
                 '}';
     }
 
@@ -53,19 +53,19 @@ public class Category {
         Category category = (Category) o;
 
         if (name != null ? !name.equals(category.name) : category.name != null) return false;
-        return setProduct != null ? setProduct.equals(category.setProduct) : category.setProduct == null;
+        return products != null ? products.equals(category.products) : category.products == null;
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (setProduct != null ? setProduct.hashCode() : 0);
+        result = 31 * result + (products != null ? products.hashCode() : 0);
         return result;
     }
 
     public static void main(String[] args) {
-        ComporatorOfPrice comporatorOfPrice = new ComporatorOfPrice();
-        ComporatorOfName comporatorOfName = new ComporatorOfName();
+        ComparatorOfPrice comporatorOfPrice = new ComparatorOfPrice();
+        ComparatorOfName comporatorOfName = new ComparatorOfName();
         Set<Product> products1 = new TreeSet<>();
         Set<Product> products2 = new TreeSet<>(comporatorOfPrice);
         Set<Product> products3 = new TreeSet<>(comporatorOfName);

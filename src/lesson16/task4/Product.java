@@ -66,7 +66,6 @@ public class Product implements Comparable<Product> {
 
     @Override
     public int compareTo(Product o) {
-        int rat = o.getRaiting();
-        return this.raiting - rat;
+        return this.raiting - o.getRaiting();
     }
 }

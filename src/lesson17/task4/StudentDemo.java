@@ -1,7 +1,5 @@
 package lesson17.task4;
 
-import lesson17.task4.Student;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +22,7 @@ public class StudentDemo {
         students.add(student2);
         System.out.println("Студенты до отчисления: ");
         Student.printStudent(students, 3);
-        Student.averageMark(students);
+        Student.passOrNot(students);
         System.out.println("Студенты, которые перешли на следующий курс:");
         Student.printStudent(students, 4);
     }

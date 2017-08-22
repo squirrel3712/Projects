@@ -1,14 +1,12 @@
 package lesson17.task2;
 
-import lesson17.task2.HeavyBox;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class UseIterator {
-    public static List checkBox(List<HeavyBox> box) {
+    public static List<HeavyBox> checkBox(List<HeavyBox> box) {
         List<HeavyBox> newBox = new ArrayList<>();
         Iterator<HeavyBox> iterator = box.iterator();
         while (iterator.hasNext()) {
@@ -30,9 +28,9 @@ public class UseIterator {
         listOfBox.add(box2);
         listOfBox.add(box3);
 
-        List<HeavyBox> listNewBox = new ArrayList<>(checkBox(listOfBox));
+        List listNewBox = checkBox(listOfBox);
 
-        for(HeavyBox box : listNewBox){
+        for (Object box : listNewBox) {
             System.out.println(box);
         }
     }

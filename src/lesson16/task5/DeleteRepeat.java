@@ -8,7 +8,7 @@ public class DeleteRepeat {
     public static String delRepeat(String str) {
         Pattern pattern = Pattern.compile("\\D+\\s*");
         String array[] = pattern.split(str);
-        Set set = new TreeSet();
+        Set<String> set = new TreeSet<>();
         for (String s : array) {
             set.add(s);
         }

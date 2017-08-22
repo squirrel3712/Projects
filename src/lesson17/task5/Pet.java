@@ -1,11 +1,12 @@
 package lesson17.task5;
 
 import java.util.Map;
+import java.util.Set;
 
 public class Pet {
     private String name;
 
-    public Pet(String name){
+    public Pet(String name) {
         this.name = name;
     }
 
@@ -17,9 +18,10 @@ public class Pet {
         this.name = name;
     }
 
-    public static void printPets(Map<String,Pet> pets){
-        for(Pet pet: pets.values()){
-            System.out.println(pet.getName());
+    public static void printPets(Map<String, Pet> pets) {
+        Set<String> set = pets.keySet();
+        for (String key : set) {
+            System.out.println(key);
         }
     }
 
