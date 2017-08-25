@@ -1,6 +1,7 @@
-package lesson13.task6;
+package task6;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -20,7 +21,7 @@ public class FullReport {
         Calendar calendar = new GregorianCalendar(2017, 0, 28);
         Employee.salaryDate = calendar.getTime();
         String text = getValue(Locale.US, "key");
-        SimpleDateFormat df = new SimpleDateFormat(text + " dd", Locale.US);
+        DateFormat df = new SimpleDateFormat("" + text + " dd", Locale.US);
         String date = df.format(Employee.salaryDate);
         return date;
     }

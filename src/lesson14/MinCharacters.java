@@ -9,6 +9,15 @@ public class MinCharacters {
         System.out.println(m.findLittleWord(s));
     }
 
+    public static String deleteRepeat(String s, String word) {
+        for (int j = 0; j < word.length(); j++) {
+            if (!s.contains(word.substring(j, j + 1))) {
+                s += word.substring(j, j + 1);
+            }
+        }
+        return s;
+    }
+
     public String findLittleWord(String s) {
         Pattern pattern = Pattern.compile("\\W+\\s*");
         String array[] = pattern.split(s);
@@ -16,11 +25,7 @@ public class MinCharacters {
         for (int i = 0; i < array.length; i++) {
             String word = array[i];
             String buf = "";
-            for (int j = 0; j < word.length(); j++) {
-                if (!buf.contains(word.substring(j, j + 1))) {
-                    buf += word.substring(j, j + 1);
-                }
-            }
+            deleteRepeat(buf, word);
             tempArray[i] = buf.length();
         }
         return array[minOfArray(tempArray)];
