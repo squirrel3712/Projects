@@ -14,7 +14,7 @@ public class WrongExceptionDemo {
                 state = false;
                 throw new WrongLoginException("Not correct login");
             }
-            if (!matcher2.matches() || password != confirmPassword) {
+            if (!matcher2.matches() || !password.equals(confirmPassword)) {
                 state = false;
                 throw new WrongPasswordException();
             }

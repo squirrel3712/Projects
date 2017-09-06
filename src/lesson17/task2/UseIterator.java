@@ -27,9 +27,7 @@ public class UseIterator {
         listOfBox.add(box1);
         listOfBox.add(box2);
         listOfBox.add(box3);
-
-        List listNewBox = checkBox(listOfBox);
-
+        List<HeavyBox> listNewBox = checkBox(listOfBox);
         for (Object box : listNewBox) {
             System.out.println(box);
         }
