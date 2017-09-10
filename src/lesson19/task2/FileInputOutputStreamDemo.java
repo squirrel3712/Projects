@@ -4,8 +4,8 @@ import java.io.*;
 
 public class FileInputOutputStreamDemo {
     public static void main(String args[]) {
-        try (OutputStream output = new FileOutputStream("src/io/a.txt");
-             InputStream input = new FileInputStream("src/io/a.txt")) {
+        try (OutputStream output = new FileOutputStream("src/lesson19/io/a.txt");
+             InputStream input = new FileInputStream("src/lesson19/io/a.txt")) {
             char c[] = {'a', 'b', 'c'};
             for (char ch : c) {
                 output.write(ch);
