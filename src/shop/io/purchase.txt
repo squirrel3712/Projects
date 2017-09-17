@@ -1,0 +1,1 @@
+[shop.Devices{name='Apple iMac 22', cost=22000, weight=5, ram=8, sizeOfScreen=22}]
