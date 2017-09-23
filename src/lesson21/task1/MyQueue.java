@@ -19,7 +19,6 @@ public class MyQueue<T extends Number> {
             }
         }
         System.out.println("Пoлyчeнo: " + queue.peek());
-        notify();
         return queue.poll();
     }
 
