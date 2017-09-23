@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Registration {
-    public  User registration() {
+    public User registration() {
         Scanner sc = new Scanner(System.in);
         String login = "";
         String password = "";

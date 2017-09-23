@@ -22,10 +22,10 @@ public class Bin implements Serializable {
         this.listOfDevices = listOfDevices;
     }
 
-    public void serialize(Bin bin) {
+    public void serialize() {
         try (OutputStream os = new FileOutputStream("src/shop/io/serialize.txt");
              ObjectOutput out = new ObjectOutputStream(os)) {
-            out.writeObject(bin);
+            out.writeObject(this);
         } catch (IOException e) {
             e.printStackTrace();
         }

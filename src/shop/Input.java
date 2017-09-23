@@ -7,15 +7,15 @@ public class Input {
         Scanner sc = new Scanner(System.in);
         int temp = 0;
         do {
-            try{
+            try {
                 temp = sc.nextInt();
                 break;
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("Incorrect entrance " + e.getClass());
                 System.out.println("Try again");
                 sc.nextLine();
             }
-        }while (true);
+        } while (true);
         return temp;
     }
 }

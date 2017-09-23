@@ -54,7 +54,7 @@ public class Printer {
                 if (chooseType()) {
                     list1.sort(new AscendingComparatorOfName());
                 } else {
-                    list1.sort(new DescendingComparatorOfName());
+                    list1.sort(Collections.reverseOrder(new AscendingComparatorOfName()));
                 }
                 printProduct(list1);
                 break;
@@ -62,7 +62,7 @@ public class Printer {
                 if (chooseType()) {
                     list1.sort(new AscendingComparatorOfPrice());
                 } else {
-                    list1.sort(new DescendingComparatorOfPrice());
+                    list1.sort(Collections.reverseOrder(new AscendingComparatorOfPrice()));
                 }
                 printProduct(list1);
                 break;
@@ -70,7 +70,7 @@ public class Printer {
                 if (chooseType()) {
                     list1.sort(new AscendingComparatorOfSizeScreen());
                 } else {
-                    list1.sort(new DescendindComparatorOfSizeScreen());
+                    list1.sort(Collections.reverseOrder(new AscendingComparatorOfSizeScreen()));
                 }
                 printProduct(list1);
                 break;
@@ -78,7 +78,7 @@ public class Printer {
                 if (chooseType()) {
                     list1.sort(new AscendingComparatorOfRam());
                 } else {
-                    list1.sort(new DescendingComparatorOfRam());
+                    list1.sort(Collections.reverseOrder(new AscendingComparatorOfRam()));
                 }
                 printProduct(list1);
                 break;
@@ -86,7 +86,7 @@ public class Printer {
                 if (chooseType()) {
                     list1.sort(new AscendingComparatorOfWeight());
                 } else {
-                    list1.sort(new DescendingComparatorOfWeight());
+                    list1.sort(Collections.reverseOrder(new AscendingComparatorOfWeight()));
                 }
                 printProduct(list1);
                 break;
@@ -173,7 +173,7 @@ public class Printer {
                         purchase.setDevicesList(bin.getListOfDevices());
                         counterOfPurchase.count(purchase);
                         PrintWriterToFlile.printToFile(bin);
-                        bin.serialize(bin);
+                        bin.serialize();
                         for (int i = 0; i < bin.getListOfDevices().size(); i++) {
                             removerFromBin.removeDevicesFromBin(bin, i);
                         }
