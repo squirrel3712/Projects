@@ -1,0 +1,1 @@
+[shop.Devices{name='Apple MacBook Pro 13', cost=36000, weight=2, ram=8, sizeOfScreen=12}, shop.Devices{name='Apple MacBook Pro 13', cost=36000, weight=2, ram=8, sizeOfScreen=12}]
